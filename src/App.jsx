@@ -41,8 +41,8 @@ const App = () => {
   }
 
   const onCheckout = () => {
-    telegram.Main.Button.text = 'Sotib olish :)';
-    telegram.Main.Button.show();
+    telegram.MainButton.text = 'Sotib olish :)';
+    telegram.MainButton.show();
   };
 
   return (
