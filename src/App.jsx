@@ -46,8 +46,21 @@ const App = () => {
   };
 
   const onSendData = useCallback(() => {
-    telegram.sendData(JSON.stringify(cartItems))
+    const queryId = telegram.initDataUnSave?.query_id
+
+    if(queryId) {
+      fetch('https://localhost8000/web-data', {
+        meethod: 'POST',
+        headers: {
+          'Content Type': 'application/json',
+        },
+        body: JSON.stringify(cartItems),
+      })
+    } else {
+      telegram.sendData(JSON.stringify(cartItems))
+    }
   }, [cartItems])
+
 
   useEffect(() => {
     telegram.onEvent('mainButtonClicked', onSendData)
