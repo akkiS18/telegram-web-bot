@@ -46,7 +46,7 @@ const App = () => {
   };
 
   const onSendData = useCallback(() => {
-    const queryId = telegram.initDataUnSave?.query_id
+    const queryId = telegram.initDataUnSafe?.query_id
 
     if(queryId) {
       fetch('https://localhost8000/web-data', {
