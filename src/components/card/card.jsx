@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import Button from '../button/button'
-import './card.css'
+import { useState } from 'react';
+import Button from '../button/button';
+import './card.css';
 
 const Card = (props) => {
     const [count, setCount] = useState(0)
