@@ -1,6 +1,7 @@
-import { totalPrice } from '../../units/total-price'
-import Button from '../button/button'
-import './cart.css'
+import { totalPrice } from '../../units/total-price';
+import Button from '../button/button';
+import './cart.css';
+
 
 const Cart = ({ cartItems, onCheckout }) => {
   return (
