@@ -6,13 +6,10 @@ import './cart.css';
 const Cart = ({ cartItems, onCheckout }) => {
   return (
     <div className='cart__container'>
-        <p>Umumiy narx: {totalPrice(cartItems).toLocaleString('en-US', {
-          style: 'currency',
-          currency: 'USD'
-        })}</p>
+        <p>Umumiy narx: {totalPrice(cartItems)} ming so'm</p>
 
         <Button 
-        title={`${cartItems.length === 0 ? 'Buyurtma berish' : "To'lov"}`} 
+        title={`${cartItems.length === 0 ? 'Buyurtma berish📱' : "To'lov💵"}`} 
         disable={cartItems.length === 0 ? true : false}
         type={'checkout'} 
         onClick={onCheckout}

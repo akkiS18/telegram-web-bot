@@ -41,7 +41,7 @@ const App = () => {
   }
 
   const onCheckout = () => {
-    telegram.MainButton.text = 'Sotib olish :)';
+    telegram.MainButton.text = 'Sotib olish✅';
     telegram.MainButton.show();
   };
 
@@ -74,7 +74,7 @@ const App = () => {
       <Cart cartItems={cartItems} onCheckout={onCheckout} />
       <div className='cards__container'>
         {courses.map(course => (
-          <>
+          <>  
             <Card key={course.id} course={course} 
             onAddItem={onAddItem} 
             onRemoveItem={onRemoveItem}
